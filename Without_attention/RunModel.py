@@ -204,5 +204,3 @@ if __name__ == "__main__":
 	checkpoint = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
 	# fit model
 	model.fit([X1train, X2train], ytrain, epochs=epochCount, verbose=1, callbacks=[checkpoint], validation_data=([X1test, X2test], ytest), batch_size=batchSize)
-
-
